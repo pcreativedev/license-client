@@ -1,7 +1,7 @@
 {
   "name": "@pcreative/license-client",
-  "version": "1.0.0",
-  "description": "License verification client for pcreative.dev templates — RS256 JWT, offline verification, soft-kill state machine",
+  "version": "1.0.1",
+  "description": "License verification client for pcreative.dev templates \u2014 RS256 JWT, offline verification, soft-kill state machine",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -18,12 +18,19 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "tsc",
-    "prepublishOnly": "bun run build"
+    "build": "tsc"
   },
-  "keywords": ["license", "drm", "jwt", "rs256", "pcreative", "template", "anti-piracy"],
+  "keywords": [
+    "license",
+    "drm",
+    "jwt",
+    "rs256",
+    "pcreative",
+    "template",
+    "anti-piracy"
+  ],
   "author": "pcreativedev <contact@differentxperience.com>",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "repository": {
     "type": "git",
     "url": "https://github.com/pcreativedev/license-client.git"
