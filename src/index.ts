@@ -132,7 +132,7 @@ export async function activateLicense(input: ActivateInput): Promise<ActivateRes
       cache: "no-store",
     });
 
-    const data = await res.json().catch(() => ({}));
+    const data = await res.json().catch(() => ({})) as { valid?: boolean; jwt?: string; error?: string };
     if (data?.valid && data?.jwt) {
       const payload = await verifyJwt(data.jwt, input.product);
       if (!payload) {
@@ -158,7 +158,7 @@ export async function heartbeat(): Promise<boolean> {
       body: JSON.stringify({ jwt: stored.jwt }),
       cache: "no-store",
     });
-    const data = await res.json().catch(() => ({}));
+    const data = await res.json().catch(() => ({})) as { valid?: boolean; jwt?: string; error?: string };
     if (data?.valid && data?.jwt) {
       const payload = await verifyJwt(data.jwt, stored.payload.product);
       if (payload) {
